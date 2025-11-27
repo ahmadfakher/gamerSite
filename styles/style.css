@@ -1,0 +1,816 @@
+/** GENERAL STYLING START */
+
+
+@font-face {
+    font-family: DaysOne;
+    src: url("../webfonts/DaysOne.woff2") format("woff2"),
+        url("../webfonts/DaysOne.woff") format("woff"),
+        url("../webfonts/DaysOne.ttf") format("ttf");
+}
+
+
+@font-face {
+    font-family: ChakraPetch;
+    src: url("../webfonts/ChakraPetch.woff2") format("woff2"),
+        url("../webfonts/ChakraPetch.woff") format("woff"),
+        url("../webfonts/ChakraPetch.ttf") format("ttf");
+}
+
+
+:root {
+    --main-font: DaysOne, sans-serif;
+    --secondary-font: ChakraPetch, sans-serif;
+    --main-color: #F1F1F1;
+    --main-color-rgb: 241, 241, 241;
+    --secondary-color: #CBFE1C;
+    --secondary-color-rgb: 203, 254, 28;
+    --secondary-color-hover: #97b82b;
+    --secondary-color-hover-rgb: 151, 184, 43;
+    --secondary-color-active: #cdf44c;
+    --secondary-color-active-rgb: 205, 244, 76;
+    --tertiary-color: #0B0E13;
+    --tertiary-color-rgb: 11, 14, 19;
+    --side-color: #CBCFD6;
+    --side-color-rgb: 203, 207, 214;
+    --main-bg-color: #0B0E13;
+    --main-bg-color-rgb: 11, 14, 19;
+    --hero-bg-opacity: #000000e0;
+    --team-card-ach-color: #99a1af;
+    --get-in-touch-bg-1: #101828;
+    --form-label-clr: #d1d5dc;
+    --label-color: #364153;
+    --get-in-touch-bg-2: #0b0e13;
+    --img-bg-gradient: linear-gradient(to right, rgba(203, 254, 28, 1), rgba(5, 223, 114, 1));
+    --hover-gradient: linear-gradient(to top, rgba(203, 254, 28, 1), transparent);
+    --no-gradient: linear-gradient(to top, transparent, transparent);
+    --hero-img-hight: 14rem;
+    --rem-1: 1rem;
+    --rem-125: 1.25rem;
+    --rem-15: 1.5rem;
+    --rem-2: 2rem;
+    --rem-28: 2.8rem;
+    --rem-75: 0.75rem;
+    --rem-875: 0.875rem;
+    --rem-25: 2.5rem;
+    --rem-3: 3rem;
+    --rem-125: 1.25rem;
+    --rem-375: 3.75rem;
+    --rem-6: 6rem;
+    --rem-18: 18rem;
+    --rem-24: 24rem;
+    --rem-6875: 0.6875rem;
+    --rem-40: 40rem;
+    --rem-fifth: 0.2rem;
+    --hero-btn-line-height: 1.125;
+    --rem-half: 0.6rem;
+}
+
+*::selection {
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+}
+
+.main-font {
+    font-family: var(--main-font), sans-serif;
+}
+
+.sec-font {
+    font-family: var(--secondary-font), sans-serif;
+}
+
+.bg-body {
+    --bs-body-bg-rgb: var(--main-bg-color-rgb);
+}
+
+.btn-primary {
+    --bs-btn-color: var(--tertiary-color);
+    --bs-btn-bg: var(--secondary-color);
+    --bs-btn-border-color: var(--secondary-color);
+    --bs-btn-hover-color: var(--tertiary-color);
+    --bs-btn-hover-bg: var(--secondary-color-hover);
+    --bs-btn-hover-border-color: var(--secondary-color-hover);
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: var(--tertiary-color);
+    --bs-btn-active-bg: var(--secondary-color-active);
+    --bs-btn-active-border-color: var(--secondary-color-active);
+    --bs-btn-disabled-bg: var(--secondary-color-hover);
+    --bs-btn-disabled-border-color: var(--secondary-color-hover);
+}
+
+.btn-secondary {
+    --bs-btn-color: var(--secondary-color);
+    --bs-btn-bg: transparent;
+    --bs-btn-border-color: var(--secondary-color);
+    --bs-btn-hover-color: var(--tertiary-color);
+    --bs-btn-hover-bg: var(--secondary-color);
+    --bs-btn-hover-border-color: var(--secondary-color);
+    --bs-btn-active-color: var(--tertiary-color);
+    --bs-btn-active-bg: var(--secondary-color-active);
+    --bs-btn-active-border-color: var(--secondary-color-active);
+}
+
+@media(min-width: 992px) {
+    .border-lg-none {
+        border: none !important;
+    }
+}
+
+.text-success {
+    --bs-success-rgb: var(--secondary-color-rgb);
+}
+
+/* GENERAL STYLING END */
+
+/** NAVBAR STYLING START */
+
+#Navbar a:hover {
+    --bs-nav-link-hover-color: var(--secondary-color);
+}
+
+#Navbar .navbar-nav .nav-link.active,
+#Navbar .navbar-nav .nav-link.show {
+    --bs-navbar-active-color: var(--secondary-color);
+}
+
+#Navbar .nav-link {
+    --bs-nav-link-color: var(--main-color);
+}
+
+
+.navbar-toggler:focus {
+    --bs-navbar-toggler-focus-width: 0;
+}
+
+#Navbar .navbar-toggler:hover>.text-light {
+    --bs-light-rgb: var(--secondary-color-rgb);
+}
+
+/* NAVBAR STYLING END */
+
+/** HERO STYLING START */
+
+#Hero {
+    background-image: linear-gradient(var(--hero-bg-opacity), var(--hero-bg-opacity)), url("../images/hero-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50%;
+    padding-top: 105px;
+}
+
+#Hero .bg-gradient,
+#GetInTouch .bg-gradient {
+    --bs-gradient: var(--img-bg-gradient);
+}
+
+#Hero img {
+    height: var(--hero-img-hight);
+}
+
+#Hero .btn {
+    --bs-btn-border-width: 2px;
+    --bs-btn-font-size: var(--rem-75);
+    --bs-btn-line-height: var(--hero-btn-line-height);
+}
+
+#Hero .bg-dark {
+    --bs-dark-rgb: var(--tertiary-color-rgb);
+}
+
+#Hero h2 {
+    font-size: var(--rem-2);
+}
+
+#Hero p {
+    font-size: var(--rem-75);
+    line-height: var(--rem-125);
+    color: var(--side-color);
+}
+
+#Hero .abs-icon {
+    bottom: calc(var(--rem-1)*-1);
+    left: calc(var(--rem-75)*-1);
+}
+
+#Hero .abs-icon p:first-child {
+    line-height: var(--rem-875);
+    font-size: var(--rem-75);
+}
+
+#Hero .abs-icon p:last-child {
+    font-size: var(--rem-1);
+    color: white;
+}
+
+/* HERO STYLING END */
+
+/** OUR GAMES STYLING START */
+
+
+.title>p {
+    font-size: var(--rem-75);
+    letter-spacing: var(--rem-fifth);
+}
+
+.title>p:first-child:before,
+.title>p:first-child::after {
+    content: "";
+    height: 2px;
+    width: var(--rem-2);
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.title>p:first-child::before {
+    background: linear-gradient(to left, var(--secondary-color) 10%, transparent);
+    margin-right: var(--rem-875);
+}
+
+.title>p:first-child::after {
+    background: linear-gradient(to right, var(--secondary-color) 10%, transparent);
+    margin-left: var(--rem-875);
+}
+
+#Our-games .game-category {
+    font-size: var(--rem-half);
+    line-height: var(--rem-875);
+    transform: translateY(-200%);
+    transition: transform 0.3s;
+}
+
+#Our-games .game:hover .game-category {
+    transform: translateY(0);
+}
+
+#Our-games .game-name p {
+    font-size: var(--rem-1);
+}
+
+#Our-games .game-name {
+    transform: translateY(200%);
+    transition: transform 0.3s;
+}
+
+#Our-games .game:hover .game-name {
+    transform: translateY(0);
+}
+
+#Our-games .game img {
+    transition: transform 0.5s;
+}
+
+#Our-games .game:hover img {
+    transform: scale(1.1);
+}
+
+#Our-games .game {
+    border: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+#Our-games .game:hover {
+    border-color: var(--secondary-color);
+}
+
+#Our-games .game .game-category+div {
+    --bs-gradient: var(--hover-gradient);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#Our-games .game:hover .game-category+div {
+    opacity: 1;
+}
+
+#Our-games .carousel-control-next:active,
+#Our-games .carousel-control-next:hover,
+#Our-games .carousel-control-prev:active,
+#Our-games .carousel-control-prev:hover {
+    color: var(--secondary-color);
+}
+
+#Our-games .carousel-control-next:focus,
+#Our-games .carousel-control-prev:focus {
+    color: white;
+    opacity: 0.5;
+}
+
+#Our-games .all-games-btn {
+    font-size: var(--rem-75);
+}
+
+
+/* OUR GAMES STYLING END */
+
+/** WHAT WE DO STYLING START */
+
+#WhatWeDo .what-icon {
+    width: var(--rem-3);
+    height: var(--rem-3);
+}
+
+#WhatWeDo .what-icon i {
+    font-size: var(--rem-125);
+}
+
+#WhatWeDo .content p {
+    font-size: var(--rem-875);
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-top: 24px solid var(--secondary-color);
+    border-right: 24px solid transparent;
+}
+
+.top-icon {
+    transform: translateX(-100%) translateY(-100%);
+    transition: transform 0.3s;
+}
+
+.bottom-icon {
+    transform: translateX(100%) translateY(100%);
+    transition: transform 0.3s;
+}
+
+#WhatWeDo .card-what-we-do {
+    border: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+#WhatWeDo .card-what-we-do:hover {
+    border-color: var(--secondary-color);
+}
+
+#WhatWeDo .card-what-we-do .what-icon {
+    transition: all 0.3s;
+}
+
+#WhatWeDo .card-what-we-do .what-icon i {
+    transition: all 0.3s;
+}
+
+
+#WhatWeDo .card-what-we-do:hover .what-icon {
+    --main-bg-color-rgb: var(--secondary-color-rgb);
+    --bs-bg-opacity: 1;
+}
+
+#WhatWeDo .card-what-we-do:hover .what-icon i {
+    --bs-success-rgb: var(--main-bg-color);
+}
+
+#WhatWeDo .card-what-we-do:hover .bottom-icon,
+#WhatWeDo .card-what-we-do:hover .top-icon {
+    transform: translate(0);
+}
+
+.WhatWeDo::after {
+    content: "";
+    width: 80%;
+    height: 2px;
+    position: relative;
+    display: inline-block;
+    max-width: var(--rem-40);
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, transparent, var(--secondary-color) 20%, var(--secondary-color) 80%, transparent);
+    box-shadow: 0 0 10px var(--secondary-color), 0 0 20px var(--secondary-color-active);
+}
+
+/* WHAT WE DO STYLING END */
+
+/** SPONSERS STYLING START */
+
+#sponsers .sponsers-logo {
+    width: var(--rem-6);
+    height: var(--rem-6);
+}
+
+.sponsers-row-right {
+    animation: move-right 25s infinite linear alternate;
+
+}
+
+@keyframes move-right {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.sponsers-row-left {
+    animation: move-left 25s infinite linear alternate;
+
+}
+
+@keyframes move-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.sponsers-bg {
+    background: radial-gradient(var(--secondary-color) 5%, transparent 70%);
+    width: 100%;
+    height: 100%;
+}
+
+/*  SPONSERS STYLING END */
+
+/** OUR TEAM STYLING START */
+
+#OurTeam .title h2 {
+    font-size: var(--rem-25);
+}
+
+.title p:last-child {
+    color: var(--side-color);
+    letter-spacing: normal;
+    font-size: var(--rem-125);
+    line-height: var(--rem-15);
+}
+
+#OurTeam .team-card {
+    height: var(--rem-18);
+}
+
+#OurTeam .name {
+    font-size: var(--rem-125);
+    line-height: var(--rem-15);
+}
+
+#OurTeam .role {
+    font-size: var(--rem-75);
+}
+
+#OurTeam .achievement {
+    font-size: var(--rem-6875);
+    color: var(--team-card-ach-color);
+}
+
+#OurTeam .nickname {
+    writing-mode: vertical-rl;
+    height: fit-content;
+}
+
+#OurTeam .team-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: grayscale() brightness(0.9);
+    z-index: 1;
+    transition: transform 0.7s;
+}
+
+#OurTeam .team-card:hover::before {
+    transform: translateY(-100%);
+}
+
+#OurTeam .bg-grad {
+    background: linear-gradient(to Top, black 5%, transparent);
+    opacity: 0.5;
+}
+
+/* OUR TEAM STYLING END */
+
+/** CONTACT US STYLING START */
+
+#GetInTouch {
+    background: linear-gradient(to bottom right, var(--get-in-touch-bg-1), var(--get-in-touch-bg-2));
+}
+
+#GetInTouch .business-details-card,
+#GetInTouch .join-us-form {
+    background-color: rgb(30, 41, 57);
+}
+
+#GetInTouch .card-icon {
+    width: var(--rem-375);
+    height: var(--rem-375);
+    background-color: var(--secondary-color);
+    font-size: var(--rem-15);
+}
+
+#GetInTouch .business-details p:first-child,
+#GetInTouch .business-social-media p:first-child,
+#GetInTouch .join-us-form>p {
+    font-size: var(--rem-125);
+}
+
+#GetInTouch .business-details p:last-child,
+#GetInTouch .business-social-media p:last-child {
+    font-size: var(--rem-875);
+    color: var(--team-card-ach-color);
+}
+
+#GetInTouch .business-social-media div div {
+    width: var(--rem-25);
+    height: var(--rem-25);
+    background: black;
+    color: var(--secondary-color);
+    transition: opacity 0.2s;
+}
+
+#GetInTouch .business-social-media div a:hover>div {
+    opacity: 0.75;
+}
+
+textarea {
+    resize: none !important;
+}
+
+#GetInTouch label {
+    font-size: var(--rem-75);
+    color: var(--form-label-clr);
+}
+
+#GetInTouch textarea::placeholder,
+#GetInTouch input::placeholder,
+#GetInTouch select::placeholder {
+    color: rgba(248, 249, 250, 0.5);
+}
+
+#GetInTouch textarea,
+#GetInTouch input,
+#GetInTouch select {
+    background-color: var(--label-color);
+}
+
+.form-control:focus,
+.form-select:focus,
+.form-control:focus {
+    outline: 3px solid var(--secondary-color);
+    box-shadow: none;
+}
+
+#GetInTouch .newsletter {
+    background-color: white;
+}
+
+#GetInTouch .form-check-input:checked {
+    background-color: #0d6efd;
+}
+
+#GetInTouch .form-check-input:focus {
+    outline: 3px solid var(--secondary-color);
+    box-shadow: none;
+}
+
+#GetInTouch .form-select {
+    --bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-chevron-down' viewBox='0 0 16 16'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+#GetInTouch .features p:first-child {
+    font-size: var(--rem-125);
+}
+
+#GetInTouch .description {
+    font-size: var(--rem-75);
+}
+
+
+/* CONTACT US STYLING END */
+
+/** FOOTER STYLING START */
+
+#Footer p {
+    font-size: var(--rem-1);
+}
+
+#Footer a {
+    transition: all 0.2s;
+}
+
+#Footer a:hover {
+    --bs-light-rgb: var(--secondary-color-rgb);
+    opacity: 1 !important;
+}
+
+#Footer li a {
+    font-size: var(--rem-875);
+}
+
+#Footer .terms {
+    font-size: var(--rem-875);
+}
+
+#Footer .copyrights {
+    font-size: var(--rem-875);
+}
+
+/* FOOTER STYLING END */
+
+
+@media(min-width: 576px) {
+    #Hero h2 {
+        font-size: var(--rem-28);
+    }
+
+    #Hero p {
+        font-size: var(--rem-1);
+        line-height: var(--rem-125);
+    }
+
+    #Hero .btn {
+        --bs-btn-font-size: var(--rem-1);
+        --bs-btn-line-height: var(--rem-125);
+    }
+
+    #Hero img {
+        height: var(--rem-20);
+    }
+
+    #Hero .abs-icon p:last-child {
+        font-size: var(--rem-125);
+    }
+
+    #Our-games .all-games-btn {
+        font-size: var(--rem-1);
+    }
+
+    #Our-games .nav-buttons i:first-child {
+        font-size: 2.5rem;
+    }
+
+    #Our-games .nav-buttons i:last-child {
+        font-size: 1.5rem;
+    }
+
+    #Our-games .nav-buttons-container {
+        height: fit-content;
+    }
+
+    .title>p:first-child::before,
+    .title>p:first-child::after {
+        width: var(--rem-375);
+    }
+
+
+    .title>p:first-child::before {
+        background: linear-gradient(to left, var(--secondary-color) 25%, transparent);
+        margin-right: var(--rem-875);
+    }
+
+    .title>p:first-child::after {
+        background: linear-gradient(to right, var(--secondary-color) 25%, transparent);
+        margin-left: var(--rem-875);
+    }
+
+    .title h2 {
+        font-size: var(--rem-2);
+    }
+
+    .title p {
+        font-size: var(--rem-1);
+    }
+
+    #WhatWeDo .content p {
+        font-size: var(--rem-1);
+    }
+
+    #OurTeam .title h2,
+    #GetInTouch .title h2 {
+        font-size: var(--rem-28);
+    }
+
+    #OurTeam .business-social-media>p {
+        font-size: var(--rem-15);
+    }
+
+    #GetInTouch .business-social-media div div {
+        width: var(--rem-3);
+        height: var(--rem-3);
+    }
+
+    #GetInTouch .business-social-media div div i {
+        font-size: var(--rem-125);
+    }
+
+    #GetInTouch .join-us-form>p {
+        font-size: var(--rem-15);
+    }
+}
+
+@media(min-width: 768px) {
+    #Hero img {
+        height: var(--rem-24);
+    }
+
+    .title>p:first-child::before {
+        background: linear-gradient(to left, var(--secondary-color) 25%, transparent);
+        margin-right: var(--rem-875);
+    }
+
+    .title>p:first-child::after {
+        background: linear-gradient(to right, var(--secondary-color) 25%, transparent);
+        margin-left: var(--rem-875);
+    }
+
+    .title h2 {
+        font-size: 3rem;
+    }
+
+    .title>p {
+        font-size: var(--rem-1);
+    }
+
+    #Footer h1,
+    #Footer .list-head {
+        font-size: var(--rem-125) !important;
+    }
+
+    #Footer .social-media {
+        font-size: var(--rem-125);
+    }
+
+    #Footer li a {
+        font-size: var(--rem-1);
+    }
+
+    #Footer .footer-copyrights a,
+    #Footer .footer-copyrights .copyrights {
+        font-size: var(--rem-1);
+    }
+
+    #WhatWeDo .content p {
+        font-size: var(--rem-125);
+    }
+
+    #WhatWeDo .what-icon {
+        width: var(--rem-375);
+        height: var(--rem-375);
+    }
+
+    #WhatWeDo .what-icon i {
+        font-size: var(--rem-15);
+    }
+
+    #OurTeam .title h2,
+    #GetInTouch .title h2 {
+        font-size: var(--rem-3);
+    }
+
+    #OurTeam .role {
+        font-size: var(--rem-875);
+    }
+
+    #OurTeam .achievement {
+        font-size: var(--rem-75);
+    }
+
+    #OurTeam .nickname {
+        font-size: var(--rem-125);
+    }
+
+    #GetInTouch .business-details p:last-child,
+    #GetInTouch .business-social-media p:last-child {
+        font-size: var(--rem-1);
+    }
+
+    #GetInTouch .business-social-media>p.heading {
+        font-size: var(--rem-15);
+    }
+
+    #GetInTouch label {
+        font-size: var(--rem-875);
+    }
+
+    #GetInTouch .features p:first-child {
+        font-size: var(--rem-15);
+    }
+
+}
+
+@media(min-width: 992px) {
+    #Hero {
+        height: 100vh;
+    }
+
+    #Hero h2 {
+        font-size: var(--rem-375);
+    }
+
+    #Hero p {
+        line-height: var(--rem-2);
+    }
+
+    #Hero .abs-icon p:last-child {
+        font-size: var(--rem-125);
+    }
+
+    #Hero .torphy-icon {
+        font-size: var(--rem-125);
+    }
+}
