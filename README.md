@@ -1,3 +1,5 @@
+This project is licensed under the CC BY-NC 4.0 License. Commercial use is NOT permitted
+
 # gamerSite
 A simple game comapny landing page using bootstrap
 
